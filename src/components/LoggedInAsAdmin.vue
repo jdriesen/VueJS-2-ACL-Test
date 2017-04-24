@@ -1,7 +1,10 @@
 <template>
   <div class="LoggedInAsAdmin">
     <h1 class='title'>{{ msg }}</h1>
-    <p> You're currently logged in as <strong>Administrator</strong><br /></p>
+    <p> You're currently logged in as <strong>Administrator</strong><br />
+      <br  />
+      <strong>The ACL Permission = {{curPermission}}</strong>
+    </p>
     <ul>
       <li>YOU CAN go the /user via the URL</li>
       <li>The <strong>Login as User</strong> button should be visible</li>
@@ -16,7 +19,14 @@ export default {
     return {
       msg: 'Your are logged in as ADMINISTRATOR'
     }
-  }
+  },
+
+  computed: {
+    curPermission() {
+      return this.$access()
+    }
+  },
+  
 }
 </script>
 

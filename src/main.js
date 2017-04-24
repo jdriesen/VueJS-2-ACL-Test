@@ -4,6 +4,10 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import Acl from 'vue-acl'
+Vue.use( Acl, { router: router, init: 'notloggedin' } )
+
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

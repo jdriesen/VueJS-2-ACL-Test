@@ -3,7 +3,9 @@
     <h1>{{ msg }}</h1>
     <p>
       This is the 'default' component <br />
-      Currently, Nobody is logged in ...
+      Currently, Nobody is logged in ... <br  />
+      <br  />
+      <strong>The ACL Permission = {{curPermission}}</strong>
     </p>
   </div>
 </template>
@@ -15,7 +17,14 @@ export default {
     return {
       msg: 'Nobody is Logged in'
     }
-  }
+  },
+
+  computed: {
+    curPermission() {
+      return this.$access()
+    }
+  },
+
 }
 </script>
 
