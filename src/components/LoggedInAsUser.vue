@@ -23,7 +23,7 @@ export default {
   name: 'LoggedInAsUser',
   data () {
     return {
-      msg: 'Your are logged in as a USER with limited Access'
+      msg: 'You are logged in as a USER with limited Access'
     }
   },
 

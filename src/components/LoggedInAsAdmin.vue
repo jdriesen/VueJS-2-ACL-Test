@@ -17,7 +17,7 @@ export default {
   name: 'LoggedInAsAdmin',
   data () {
     return {
-      msg: 'Your are logged in as ADMINISTRATOR'
+      msg: 'You are logged in as ADMINISTRATOR'
     }
   },
 
@@ -26,7 +26,7 @@ export default {
       return this.$access()
     }
   },
-  
+
 }
 </script>
 
