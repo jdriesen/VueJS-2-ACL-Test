@@ -1,7 +1,8 @@
 <template>
   <div class="dsnHeader">
     <h3>{{ msg }}</h3>
-    <p><strong>The ACL Permission = {{curPermission}}</strong></p>
+    <p><strong>The ACL Permission (computed) = {{curPermission}}</strong></p>
+    <p><strong>The ACL Permission (via data property) = {{dtaCurPersmission}}</strong></p>
 
     <button
       class   = "btnGreen"
@@ -33,7 +34,8 @@ export default {
   name: 'dsnHeader',
   data () {
     return {
-      msg: 'Welcome to the ACL Demo'
+      dtaCurPersmission: this.$access(),
+      msg: 'Welcome to the ACL Demo',
     }
   },
 
@@ -42,6 +44,7 @@ export default {
     btnLoginAdmin() {
       let permission = 'admin'
       this.$access(permission)
+      this.dtaCurPersmission = this.$access()
       this.$forceUpdate()
       this.$router.push ( { name: 'loggedInAsAdmin' } )
     }, // End of btnLoginAdmin
@@ -49,6 +52,7 @@ export default {
     btnLoginUser() {
       let permission = 'user'
       this.$access(permission)
+      this.dtaCurPersmission = this.$access()
       this.$forceUpdate()
       this.$router.push ( { name: 'loggedInAsUser' } )
     }, // End of btnLoginUser
@@ -57,6 +61,7 @@ export default {
     btnLogout() {
       let permission = 'notloggedin'
       this.$access(permission)
+      this.dtaCurPersmission = this.$access()
       this.$forceUpdate()
       this.$router.push ( { name: 'notLoggedIn' } )
     }, // End of btnLoginUser
