@@ -42,12 +42,14 @@ export default {
     btnLoginAdmin() {
       let permission = 'admin'
       this.$access(permission)
+      this.$forceUpdate()
       this.$router.push ( { name: 'loggedInAsAdmin' } )
     }, // End of btnLoginAdmin
 
     btnLoginUser() {
       let permission = 'user'
       this.$access(permission)
+      this.$forceUpdate()
       this.$router.push ( { name: 'loggedInAsUser' } )
     }, // End of btnLoginUser
 
@@ -55,6 +57,7 @@ export default {
     btnLogout() {
       let permission = 'notloggedin'
       this.$access(permission)
+      this.$forceUpdate()
       this.$router.push ( { name: 'notLoggedIn' } )
     }, // End of btnLoginUser
 
@@ -63,6 +66,7 @@ export default {
 
   computed: {
     curPermission() {
+      console.log("curPermession Executed")
       return this.$access()
     }
   },
