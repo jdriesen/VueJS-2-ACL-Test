@@ -35,7 +35,7 @@ export default {
   data () {
     return {
       dtaCurPersmission: this.$access(),
-      msg: 'Welcome to the ACL Demo',
+      msg: 'Hi Yavor, Welcome to the ACL Demo',
     }
   },
 

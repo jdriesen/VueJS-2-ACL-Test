@@ -2,7 +2,7 @@
   <div class="dsnFooter">
     <hr  />
     <h3>{{ msg }}</h3>
-    It will be shown on every page...
+    I'm shown on every page...
     <hr  />
   </div>
 </template>
@@ -12,7 +12,7 @@ export default {
   name: 'dsnFooter',
   data () {
     return {
-      msg: 'This is the Footer'
+      msg: "This is the Footer"
     }
   }
 }

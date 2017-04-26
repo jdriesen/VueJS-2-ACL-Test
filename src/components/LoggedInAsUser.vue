@@ -11,7 +11,7 @@
         It should <strong>NOT be possible</strong> to go the the admin section via the URL.... <br />
         When a user types <strong>'/admin'</strong> in the URL, the error page should be shown... <br /><br />
       </li>
-      <li>The <strong>Login as Admin</strong> button may not be shown</li>
+      <li>Notice that the <strong>"Login as Admin"</strong> button is not shown</li>
     </ul>
 
 
